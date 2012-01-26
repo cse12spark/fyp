@@ -5,8 +5,9 @@ import java.util.Vector;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.bluetooth.*;
-import Data.DataDetails.TypeOfNetwork;
+import data.DataDetails.TypeOfNetwork;
 import virtualrouter.RoutingTable;
+import virtualrouter.TableEntry;
 public class DeviceDiscovery implements DiscoveryListener,Runnable
 {
     Vector<RemoteDevice> devicesFound = new Vector<RemoteDevice>();
@@ -16,7 +17,7 @@ public class DeviceDiscovery implements DiscoveryListener,Runnable
     int code;
     private void exception(String ex)
     {
-        System.out.println("Got exception"+ex.toString());
+        System.out.println("Got Exception"+ex.toString());
     }
     
     public DeviceDiscovery(int code)
@@ -40,6 +41,8 @@ public class DeviceDiscovery implements DiscoveryListener,Runnable
                         if(rd!=null)
                         {
                             System.out.println("Found device:"+rd.getBluetoothAddress()+" "+rd.getFriendlyName(true));
+                            TableEntry entry = new TableEntry();
+                            
                         }
                     }
                 }

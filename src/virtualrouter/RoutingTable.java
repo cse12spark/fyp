@@ -1,17 +1,5 @@
 package virtualrouter;
-
-import Data.DataDetails.*;
 import java.util.HashMap;
-import java.util.Hashtable;
-import java.util.Vector;
-
-class TableEntry
-{
-    String destinationIP;
-    TypeOfNetwork networkType;
-    float expertRating;
-    String expertDomain;
-}
 
 public abstract class RoutingTable
 {
