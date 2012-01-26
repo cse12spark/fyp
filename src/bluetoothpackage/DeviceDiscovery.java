@@ -54,14 +54,6 @@ public class DeviceDiscovery implements DiscoveryListener,Runnable
         }
     }
     
-    public static void main(String[] args) 
-    {
-        // TODO code application logic here
-        System.out.println("Searching for Devices....");
-        DeviceDiscovery ob = new DeviceDiscovery(DiscoveryAgent.GIAC);
-        ob.discoverDevices();
-    }
-
     @Override
     public void deviceDiscovered(RemoteDevice rd, DeviceClass dc) 
     {
