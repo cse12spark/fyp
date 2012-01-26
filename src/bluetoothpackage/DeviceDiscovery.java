@@ -41,8 +41,8 @@ public class DeviceDiscovery implements DiscoveryListener,Runnable
                         if(rd!=null)
                         {
                             System.out.println("Found device:"+rd.getBluetoothAddress()+" "+rd.getFriendlyName(true));
+                            //get the details from the node and update it to the table
                             TableEntry entry = new TableEntry();
-                            
                         }
                     }
                 }
